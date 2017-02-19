@@ -1,0 +1,38 @@
+title
+        <div class="titlebackground" style="text-align:center">
+			<p class="title"><h1>Hit-or-Miss</h1>
+			</p>
+			<img src="images/sniper2.jpg" style="width:100px;height:100px;>
+	css
+body{
+	background-image:url('../images/sniper2.jpg');
+	background-repeat:no-repeat;
+	background-position
+}
+
+sniper2.jpg {
+	max-height:100px;
+	max-width:auto;
+}
+
+h1.title {
+	font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+	color:black;
+}
+
+.titlebackground {
+	background-color:black;
+}
+			
+dropdown
+		<div class="input-group">
+			<input type="text" class="form-control" placeholder="Search...">
+			<span class="input-group-btn">
+				<button class="btn btn-default" type="button" aria-label="Search">
+					<i class="mdi mdi-magnify" aria-hidden="true"></i>
+				</button>
+			</span>
+		</div>

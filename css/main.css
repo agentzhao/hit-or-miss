@@ -1,0 +1,25 @@
+.box {
+    margin: 20px 20px 0 0;  
+    border: 5px solid #333;
+    overflow: hidden
+}
+.sniper2 {
+    float: right
+}
+.sniper2 img {
+    display: block;
+	margin-right:350px
+}
+.content {
+    margin-left: 250px
+}
+.title {
+    font-weight: bold;
+    font-size: 200%;
+	font-family: 'Raleway', sans-serif;
+	font-size: 60px;
+	position: relative;
+	left: 100px
+	
+	
+}
