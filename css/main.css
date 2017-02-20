@@ -1,3 +1,47 @@
+/*  */
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,400i,700,700i');
+body{
+	font-family: 'Raleway', sans-serif; font-size:16px; font-weight:300; color: #555; margin: 0; padding: 0;
+}
+
+#page {
+	max-width: 1200px; margin: 0 auto; position: relative;
+}
+
+	
+/* text */
+h1 { 
+	margin: 0 0 1em 0; font-size: 2.0em; font-weight:700;
+}
+h2 { 
+	margin: 0 0 .5em 0; font-size: 1.6em; font-weight:700; line-height: 1.1em;
+}
+h3 { 
+	margin: 0 0 .5em 0; font-size: 1.3em; font-weight:700;
+}
+h4 { 
+	margin: 0 0 1.5em 0; font-size: 1em; font-weight:700;
+}
+p {
+	margin: 0 0 1em 0;
+}
+a {
+	color: #007eff;
+}
+a:visited {
+	color: #65b1ff;
+}
+
+/* Header */
+
+/*
+header { 
+	height: 430px; background-image: url(../images/banner_1200.jpg); 
+	background-repeat:no-repeat; background-position:center botton; position: relative;
+	}
+*/
+
 /*nav bar*/
 body{
   margin: 0px;
@@ -18,14 +62,6 @@ h1{
 nav{
   width: 750px;
   margin: 1em auto;
-}
-
-nav a.mobile_menu{
-	width:32px;height:32px;
-	background: url(../images/icon_menu.svg) no repeat 0 0;
-	background-size: contain;
-	position: absolute; top 22px; left: 50%; margin-left: -16px;
-	display: none;
 }
 
 ul{
@@ -115,45 +151,8 @@ ul.dropdown ul li a:hover{
 
 .drop > a:hover:after{
   content:"";
-  border-left: 5px solid transparent;
+   border-left: 5px solid transparent;
   border-top: 5px solid #fff;
   border-right: 5px solid transparent;
 }
 /*end nav bar*/
-
-/* main/section */
-
-@import url('https://fonts.googleapis.com/css?family=Raleway:400,400i,700,700i');
-
-/* Text */
-body{
-	font-family: 'Raleway', sans-serif; font-size:16px; font-weight:300; color: #555; margin: 0; padding: 0;
-}
-
-h1 { 
-	margin: 0 0 1em 0; font-size: 2.0em; font-weight:700;
-}
-h2 { 
-	margin: 0 0 .5em 0; font-size: 1.6em; font-weight:700; line-height: 1.1em;
-}
-h3 { 
-	margin: 0 0 .5em 0; font-size: 1.3em; font-weight:700;
-}
-h4 { 
-	margin: 0 0 1.5em 0; font-size: 1em; font-weight:700;
-}
-p {
-	margin: 0 0 1em 0;
-}
-a {
-	color: #007eff;
-}
-a:visited {
-	color: #65b1ff;
-}
-
-/* Header */
-
-header { 
-	height: 430px; background: #cf0004 url(../images/banner1.jpg) no-repeat center botton; position: relative;
-}
