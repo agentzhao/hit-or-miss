@@ -33,15 +33,6 @@ a:visited {
 	color: #65b1ff;
 }
 
-/* Header */
-
-/*
-header { 
-	height: 430px; background-image: url(../images/banner_1200.jpg); 
-	background-repeat:no-repeat; background-position:center botton; position: relative;
-	}
-*/
-
 /*nav bar*/
 body{
   margin: 0px;
@@ -155,4 +146,16 @@ ul.dropdown ul li a:hover{
   border-top: 5px solid #fff;
   border-right: 5px solid transparent;
 }
-/*end nav bar*/
+/* Header */
+/*
+header { 
+	height: 430px; background-image: url(../images/banner_1200.jpg); 
+	background-repeat:no-repeat; background-position:center botton; position: relative;
+	}
+*/
+
+/* main section */
+#randomNode{
+	position: relative;
+	bottom: 100px
+}
