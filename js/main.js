@@ -108,8 +108,4 @@ for (var i = 0; i < randomNum.length; i++) {
 }
 
 /* Random Image Generator */
-function randomImg(){
-var randomNumber = Math.floor(Math.random() * 10) + 1;
-var imgName = "img_" + randomNumber + ".jpg";
-document.getElementById("imageid").src= ../images + "/" + imgName ;
-}
+
