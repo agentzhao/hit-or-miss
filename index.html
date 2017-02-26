@@ -33,40 +33,43 @@
 		<div id="page">
 			
 			<header>
-				<a class="logo" title="Hit-or-Miss" href="https://agentzhao.github.io/hit-or-miss/">RNGesus</a>
+				<!-- <a class="logo" title="Hit-or-Miss" href="index.html"><span>RNGesus</span></a> -->
+				<svg>
+					<g>
+						<rect x="0" y="0" width="140" height="40" fill="none"></rect>
+						<text x="3" y="35" font-family="Fjalla One" font-size="35" fill="White">RNGesus</text>
+					</g>
+				</svg>
+				
 				<div class="hero">
 					<h1>Hit-or-Miss</h1>
 				</div>
 
 				<nav>
 					<ul class="dropdown">
-						<li><a href="#">Home</a>
+						<li><a href="index.html">Home</a>
 						</li>
 					
 						<li class="drop"><a href="#">RNGesus</a>
 							<ul class="sub_menu">
-								<li><a href="#">Random Number Generator</a></li>
-								<li><a href="#">Random Name Generator</a></li>						
+								<li><a href="randomnumbergenerator.html">Random Number Generator</a></li>
+								<li><a href="randomnamegenerator.html">Random Name Generator</a></li>						
 							</ul>
 						</li>
 						
-						<li><a href="#">Support</a>
+						<li><a href="support.html">Support</a>
 						</li>
 					
-						<li><a href="#">About</a>
+						<li><a href="about.html">About</a>
 						</li>
 					</ul>
 				</nav> 
 			</header>
 			
 			<section class="main">
-				<aside>
-					<div class="content">
-						<img alt="Random Image" src="images/blank.jpg">
-						<h4>Random Name Here</h4>
-						<!-- button to randomise image here --->
-					</div>
-				</aside>
+			<br><br><br><br>
+				<button type="button" id="question7" class="btn btn-info randomNum randomNode" min="1" max="100" master="question7">try</button>
+
 				<blockquote>
 					<p class="quote">Keep Calm and pray to RNGesus</p>
 					<p class="credit"><strong>RNGesus</strong><br><em>Our Lord and Saviour</em></p>
