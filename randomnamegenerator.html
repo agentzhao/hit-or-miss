@@ -27,36 +27,49 @@
 		<style>
 
 		</style>
+		<script src="../js/jquery-3.1.1.min.js"></script>
     </head>
 	<body>
 	
 		<div id="page">
 			
 			<header>
-				<a class="logo" title="Hit-or-Miss" href="index.html"><span>RNGesus</span></a>
-				<div class="hero">
-					<h1>Hit-or-Miss</h1>
-				</div>
+				<!-- <a class="logo" title="Hit-or-Miss" href="index.html"><span>RNGesus</span></a> -->
+				<!--<svg>
+					<g>
+						<rect x="0" y="0" width="140" height="40" fill="none"></rect>
+						<text x="3" y="35" font-family="Fjalla One" font-size="35" fill="White">RNGesus</text>
+					</g>
+				</svg> -->
+				
+				<h1 class="logo"><a href="">Hit-or-Miss</a></h1>
 
-				<nav>
-					<ul class="dropdown">
-						<li><a href="index.html">Home</a>
-						</li>
+				<div class="mobile-nav">
+					<div class="menu-btn" id="menu-btn">
+						<div></div>
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+				
+					<div class="responsive-menu">
+						<ul class="nav-list">
+							<li><a href="index.html">Home</a></li>
 					
-						<li class="drop"><a href="#">RNGesus</a>
-							<ul class="sub_menu">
-								<li><a href="randomnumbergenerator.html">Random Number Generator</a></li>
-								<li><a href="randomnamegenerator.html">Random Name Generator</a></li>						
-							</ul>
-						</li>
-						
-						<li><a href="support.html">Support</a>
-						</li>
+							<li class="nav-dropdown"><a href="#">RNGesus</a>
+								<ul class="sub_menu">
+									<li><a href="randomnumbergenerator.html">Random Number Generator</a></li>
+									<li><a href="randomnamegenerator.html">Random Name Generator</a></li>						
+								</ul>
+							</li>
+							
+							<li><a href="#!">About</a></li>
 					
-						<li><a href="about.html">About</a>
-						</li>
-					</ul>
-				</nav> 
+							<li class="back-to-top"><a href="#">Back To Top</a></li>
+						</ul>
+					</div> 
+				</div>
 			</header>
 			
 			<section class="main">
@@ -86,6 +99,9 @@
 			</footer>
 
 		</div>
+		
+
+		
         <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.1.1.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
@@ -100,6 +116,36 @@
 		
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
+		<script type="text/javascript">
+			jQuery(function($){
+				$( '.menu-btn' ).click(function(){
+				$('.responsive-menu').toggleClass('expand')
+				})
+			})
+		</script>
+		
+		<script>
+			jQuery(document).ready(function($){
+				$(".menu-item-has-children").append("<div class='open-menu-link open'>+</div>");
+				$('.menu-item-has-children').append("<div class='open-menu-link close'>-</div>");
+	
+				$('.open').addClass('visible');
+	
+				$('.open-menu-link').click(function(e){
+					var childMenu =  e.currentTarget.parentNode.children[1];
+					if($(childMenu).hasClass('visible')){
+						$(childMenu).removeClass("visible");
+	
+						$(e.currentTarget.parentNode.children[3]).removeClass("visible");
+						$(e.currentTarget.parentNode.children[2]).addClass("visible");
+					} else {
+						$(childMenu).addClass("visible");
+	
+					$(e.currentTarget.parentNode.children[2]).removeClass("visible");
+						$(e.currentTarget.parentNode.children[3]).addClass("visible");
+					}
+				});
+			});
+		</script>
 	</body>
 </html>
