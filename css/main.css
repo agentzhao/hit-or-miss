@@ -5,6 +5,11 @@ body{
 	font-family: 'Raleway', sans-serif; font-size:16px; font-weight:300; color: #555; margin: 0; padding: 0;
 }
 
+div.responsive-menu {
+	font-family: 'Nunito Sans', sans-serif;
+	
+}
+
 #page {
 	max-width: 1200px; margin: 0 auto; position: relative;
 }
@@ -23,7 +28,7 @@ ol, ul {
 }
 
 blockquote {
-	backgorund: #f9f9f9;
+	background: #f9f9f9;
 	border-left: 10px solid #ccc;
 	margin: 1.5em 10px;
 	padding: 0.5em 10px;
@@ -71,7 +76,7 @@ ul {
 }
  
 a {
-    color: #1D745A;
+    color: #ffffff;
 }
  
 h1 {
@@ -155,7 +160,7 @@ h1.logo a {
 
 .responsive-menu{
 	max-height:0;
-	background: #999999;
+	background: #1c1c1c;
 	width: 300px;
 	overflow: hidden;
 	transition: all .25s;
@@ -185,13 +190,15 @@ li .sub-menu{
  
 /*footer*/
  
-footer {
-    font-family: 'PT Serif', serif;
-    font-style: italic;
-    text-align: center;
-    font-size: 14px;
+body {
+	display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
+main {
+	flex: 1 0 auto;
+}
 
 /* main section */
 #randomNode{
@@ -254,12 +261,4 @@ footer {
     display: none;
 }
 
-
-
-
-
-
-
-
-
-
+/* randomnamegenerator.html */
