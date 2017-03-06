@@ -16,35 +16,9 @@ div.responsive-menu {
 
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-    display: block;
-}
+
 body {
     line-height: 1;
-}
-ol, ul {
-    list-style: none;
-}
-
-blockquote {
-	background: #f9f9f9;
-	border-left: 10px solid #ccc;
-	margin: 1.5em 10px;
-	padding: 0.5em 10px;
-	quotes: "\201C""\201D""\2018""\2019";
-}
-
-blockquote:before {
-	color: #ccc;
-	content: open-quote;
-	font-size: 4em;
-	line-height: 0.1em;
-	margin-right: 0.25em;
-	vertical-align: -0.4em;
-}
-blockquote p {
-	display: inline;
 }
 
 ins {
@@ -59,37 +33,13 @@ table {
     border-spacing: 0;
 }
 /*begin our styles*/
- 
-body {
-    font: 16px/1.4em 'PT Sans', sans-serif;;
-    color: #1c1c1c;
-}
- 
-
 ul {
     margin: 0 0 1.5em;
-}
- 
-ul {
     list-style: disc;
     padding: 0 0 0 20px;
 }
- 
-a {
-    color: #ffffff;
-}
- 
-h1 {
- 
-}
- 
-h2 {
-    font-family: 'PT Serif', serif;
-    font-size: 32px;
-    line-height: 1.4em;
-    margin: 0 0 .4em;
-    font-weight: bold;
-}
+
+
  
 /*layout*/
  
@@ -189,7 +139,6 @@ li .sub-menu{
 }
  
 /*footer*/
- 
 body {
 	display: flex;
     min-height: 100vh;
@@ -261,4 +210,4 @@ main {
     display: none;
 }
 
-/* randomnamegenerator.html */
+
