@@ -1,5 +1,16 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
+<!-- 
+101 147 145 156 164 172 150 141 157 
+              _______.
+   ______    | .   . |\
+  /     /\   |   .   |.\
+ /  '  /  \  | .   . |.'|
+/_____/. . \ |_______|.'|
+\ . . \    /  \ ' .   \'|
+ \ . . \  /    \____'__\|
+  \_____\/
+-->
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -17,15 +28,21 @@
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
 		<!-- Font -->
 		<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,700,700i" rel="stylesheet">
+		<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 		<!-- Optional theme -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+		<!--Import materialize.css-->
+		<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+		<!-- My own CSS -->
 		<link rel="stylesheet" href="css/main.css" type="text/css">
 		
-		<style>		</style>
+
+		<style>
+		</style>
 		<script src="../js/jquery-3.1.1.min.js"></script>
 		<script type="text/javascript" src="js/materialize.min.js"></script>
     </head>
@@ -56,14 +73,8 @@
 					<div class="responsive-menu">
 						<ul class="nav-list">
 							<li><a href="index.html">Home</a></li>
-					
-							<li class="nav-dropdown"><a href="#">RNGesus</a>
-								<ul class="sub_menu">
-									<li><a href="randomnumbergenerator.html">Random Number Generator</a></li>
-									<li><a href="randomnamegenerator.html">Random Name Generator</a></li>						
-								</ul>
-							</li>
-							
+							<li><a href="randomnumbergenerator.html">Random Number Generator</a></li>
+							<li><a href="randomnamegenerator.html">Random Name Generator</a></li>
 							<li><a href="about.html">About</a></li>
 						</ul>
 					</div> 
@@ -72,8 +83,13 @@
 			
 			<section class="main">
 			<br><br><br><br>
-				<button type="button" id="question7" class="btn btn-info randomNum randomNode" min="1" max="100" master="question7">try</button>
-
+				<div style="text-align: center">
+					<button type="button" id="question7" class="btn btn-info randomNum randomNode" min="1" max="100" master="question7">try</button>
+				</div>
+				<div>
+					<h2 style="text-align:center">All praise <a href="https://youtu.be/ClYoiv338Uk?t=40s">RNGesus</a></h2>
+				</div>
+				
 				<blockquote>
 					<p class="quote">Keep Calm and pray to RNGesus</p>
 					<br>
@@ -81,12 +97,12 @@
 				</blockquote>
 			</section>
 			
-			<footer>
-				&copy; Hit-or-Miss
-				<div class="content">
-					<a title="Privacy Policy" href="#">Privacy Policy</a>
-					<a title="Terms of Service" href="#">Terms of Service</a>
-					<a href="#">Back To Top</a>
+			<footer class="page-footer grey darken-4">
+				<div class="footer-copyright">
+					<div class="container">
+						<a class="white-text left" href="#!">© Copyright 2017</a>
+						<a class="white-text right" href="https://github.com/Agentzhao">More</a>
+					</div>
 				</div>
 			</footer>
 			
