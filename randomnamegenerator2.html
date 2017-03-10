@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Hit-or-Miss</title>
+        <meta name="description" content="Hit-or-Miss">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		
+        <!-- Place favicon.ico in the root directory -->
+        <link rel="apple-touch-icon" href="images/favicon.ico">
+		<link rel=icon href="images/favicon.ico" type="image/x-icon">
+		
+		<!-- material design -->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+		<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+	
+		<!-- Font -->
+		<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,700,700i" rel="stylesheet">
+		
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<!-- Optional Bootstrap theme -->
+		<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+
+		<!--Import materialize.css-->
+		<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+		<!-- My own CSS -->
+		<link rel="stylesheet" href="css/main.css" type="text/css">
+	
+		<script type="text/javascript">
+		var random_images_array = ['ang.kuanglong.jpg', 'ang.sinyu.jpg', 'ang.sookmin.michelle.jpg', 'ang.weijing.jpg', 'ang.weileong.jpg', 'ang.wenyang.jpg', 'ang.xiaoyi.jpg', 'ang.xinling.adelle.jpg', 'ang.xinrong.amanda.jpg', 'ang.xinyin.jpg', 'baey.zoer.jpg', 'bian.tong.jpg', 'boh.duangsey.jpg', 'boon.yanman.mabel.jpg', 'chan.keqing.jpg', 'chan.kwangjie.jeremy.jpg', 'chan.li.rachel.jpg', 'chan.shinning.jpg', 'chan.sihon.jpg', 'chan.tingshuen.jade.jpg', 'chan.zhaokang.nathaniel.jpg', 'chang.weiching.jpg', 'chee.jenhao.jovan.jpg', 'chee.zheliang.darren.jpg', 'chen.haoyeung.jpg', 'chen.jing1.jpg', 'chen.shudan.jpg', 'chen.shun.jpg', 'chen.wenjing.chantelle.jpg', 'chen.xiaozhou.jpg', 'chen.xinyi.jpg', 'cheong.grace.jpg', 'cheong.jiayun.brenda.jpg', 'cheong.weijuan.jpg', 'cher.jialin.celine.jpg', 'chew.guohui.bryan.jpg', 'chew.junhao.keith.jpg', 'chew.shien.shawn.jpg', 'chew.yuting.jazlyn.jpg', 'chew.ziying.jpg', 'chia.cheeyong.bryan.jpg', 'chia.kaixin.jpg', 'chin.ngiokyong.jpg', 'chin.suekay.jpg', 'chin.yongchen.jpg', 'chiu.yiwen.jpg', 'chong.qihui.anthony.jpg', 'chong.zhekai.zachary.jpg', 'chong.zhiyang.jpg', 'chou.pohan.jpg', 'chow.angel.jpg', 'chua.jiarong.jpg', 'chua.kaiyi.kelly.jpg', 'chua.liangwei.collin.jpg', 'chua.shaelinn.jpg', 'chua.weili.jpg', 'chua.xinni.nicole.jpg', 'chua.yi.jpg', 'chua.yilin.jpg', 'chua.yuxin.jpg', 'chui.waikin.linus.jpg', 'clarissa.felice.nurawan.jpg', 'dee.murui.marcus.jpg', 'dou.minyue.jpg', 'ee.ansheng.jpg', 'foo.ningxin.jpg', 'foo.sheelynn.jpg', 'foong.haohan.isaac.jpg', 'foong.ruhui.jpg', 'foong.xinyi.reena.jpg', 'fu.jiaxin.jpg', 'gan.ruiyi.jpg', 'goh.joshaun.jpg', 'goh.junxian.gaston.jpg', 'goh.kaisiong.daniel.jpg', 'goh.kuanwei.eldrick.jpg', 'goh.qingkhang.jpg', 'goh.siauwee.jpg', 'gu.zehao.jpg', 'guan.ziwen.jpg', 'guo.chenrui.jpg', 'guo.yisheng.jpg', 'guo.yuxin.jpg', 'han.xingyi.jpg', 'he.baifeng.jpg', 'heng.weiting.charlene.jpg', 'hing.weiyen.clarisse.jpg', 'ho.cheukkiu.anthony.jpg', 'ho.chikiat.eric.jpg', 'ho.jingzhi.xanthus.jpg', 'ho.lixuan.rachel.jpg', 'hong.xinyue.jpg', 'hou.linxin.jpg', 'hsu.yining.jpg', 'huang.shiyun.jpg', 'huang.xu.jpg', 'huang.yuqian.jpg', 'jin.zilong.jpg', 'kang.yixi.jpg', 'kang.yunhui.chloe.jpg', 'kee.seowhan.jpg', 'koh.chengyee.reena.jpg', 'koh.chinqi.reinald.jpg', 'koh.jiayi.jolene.jpg', 'koh.jieqing.shanice.jpg', 'koh.jinkai.jonathan.jpg', 'koh.meiyi.rachel.jpg', 'koh.mingen.jpg', 'koh.mingyi.jpg', 'koh.ruijie.jpg', 'koh.ruiling.jpg', 'koh.yiksim.jess.jpg', 'koh.zhewei1.jpg', 'koh.zixian.jpg', 'koo.zhengtao.jpg', 'kua.wingyew.elena.jpg', 'kuoh.junjie.jpg', 'kwa.zhicheng.jpg', 'lai.wanjun.jpg', 'lai.yihui.cleon.jpg', 'lam.yunxiu1.jpg', 'lau.feihan.clare.jpg', 'law.seanmeng.jpg', 'law.songen.timothy.jpg', 'lean.jieying.jpg', 'lee.dan.joan.jpg', 'lee.haoming.jpg', 'lee.huimin.hannah.dominy.jpg', 'lee.huiyi.samantha.jpg', 'lee.jiahui.jane.jpg', 'lee.jiaxuan.valora.jpg', 'lee.jiemin1.jpg', 'lee.jieyi.amidala.jpg', 'lee.jieying.michelle.jpg', 'lee.jinkang.jpg', 'lee.qi.jpg', 'lee.shinsiang.jeryl.jpg', 'lee.sinyuen.jpg', 'lee.tong.rachel.jpg', 'lee.wenting.cheryl.jpg', 'lee.xianlu.jpg', 'lee.yeeling.jpg', 'lee.yentheng.jpg', 'lee.yishan.jpg', 'lee.yuerong.jpg', 'lee.yuquan.jpg', 'lek.zening.jpg', 'leng.yunhui.gladys.jpg', 'leow.yonghan.jerome.jpg', 'li.jiayang.jpg', 'li.lingchen.jpg', 'li.mingyuan.jpg', 'li.yingying.jpg', 'li.zhaoqi.jpg', 'liang.kaili.meg.jpg', 'liang.qiliu.jpg', 'liaw.yingru.karis.jpg', 'liew.xinwei.jpg', 'liew.yunhe.trina.jpg', 'liew.yunzhen.karynn.jpg', 'lim.choonhong.dexter.jpg', 'lim.enqi.natalie.jpg', 'lim.jiaying.grace.jpg', 'lim.kainsim.audrey.jpg', 'lim.kaixin.sheena.jpg', 'lim.min.renee.jpg', 'lim.siting.sarah.jpg', 'lim.xinyan1.jpg', 'lim.yiqi.kolette.jpg', 'lim.yitorng.jpg', 'lim.yongshi.chloe.jpg', 'lim.yunxuan.patria.jpg', 'lim.zerui.jeffrey.jpg', 'lim.zhijia.jpg', 'lim.zian.ryan.jpg', 'lim.zihwee.corliss.jpg', 'lin.chieh.jpg', 'lin.minchen.jpg', 'lin.ming.jpg', 'lin.zhiqi.jpg', 'liu.enmu.jpg', 'liu.yantong.ashley.jpg', 'liu.zixin.jpg', 'loh.bojie.sean.jpg', 'loh.danhong.jpg', 'loh.jianyang.jpg', 'loh.jiawen.jpg', 'loh.ruixuan.carine.jpg', 'loh.wenyu.jpg', 'loh.woonqing.pearlyn.jpg', 'loke.zhihao.ivan.jpg', 'low.hoykay.nadya.jpg', 'low.jiayun.cheryl.jpg', 'low.jinghwee.grace.jpg', 'low.jingwen.megan.jpg', 'low.junpeng.lincoln.jpg', 'low.yuanjia.dannica.jpg', 'lu.jiaxin.jacky.jpg', 'lu.zechen.jpg', 'lye.jueyin.amanda.jpg', 'ma.yuge.jpg', 'ma.yuxin.jpg', 'man.waiting.jpg', 'mok.jingwen.jpg', 'mok.shuwen.marion.jpg', 'mun.yitjit.ashley.jpg', 'neo.jieyun.jamie.jpg', 'ng.chekkhau.jpg', 'ng.cuiting.christine.jpg', 'ng.eefong.jpg', 'ng.jiahui.cheryl.jpg', 'ng.jiaying.cliona.jpg', 'ng.jingqing.jpg', 'ng.jingyi.stephanie.jpg', 'ng.lien.chloe.jpg', 'ng.minyee.rachel.jpg', 'ng.sehng.wayne.jpg', 'ng.sekit.ethan.jpg', 'ng.sinyi.talia.jpg', 'ng.tzeann.jonathan.jpg', 'ng.weiyang.shaun.jpg', 'ng.xingyu.jpg', 'ng.zixin.jpg', 'ng.ziyan.priscila.jpg', 'ngiam.minsi.eunice.jpg', 'ngiow.haobin.jpg', 'ngo.yingxuan.jpg', 'ngoh.pekngee.yukie.jpg', 'oh.xinyi.jpg', 'ong.claudia.beth.jpg', 'ong.hongkai.jpg', 'ong.hongli.jpg', 'ong.huiru.lauren.jpg', 'ong.junhong.bryan.jpg', 'ong.kailoong.aaron.jpg', 'ong.liying.valerie.jpg', 'ong.qingqing.jpg', 'ong.siying.sheryl.jpg', 'ong.wanqing.renee.jpg', 'ong.ziyuan.jpg', 'oon.shaoren.jpg', 'peh.minghan.jpg', 'pei.zheyi.randall.jpg', 'peng.weiyao.jpg', 'phang.jieqi.jackie.jpg', 'phang.lixuan.celest.jpg', 'phang.xinnminn.marissa.jpg', 'phua.kahhwee.michelle.jpg', 'phua.xuemin.julia.jpg', 'phua.yuwen.jpg', 'poh.baoli.jpg', 'poh.huiyun.fiona.jpg', 'poh.jieru.shermin.jpg', 'poh.jingting.cheryl.jpg', 'poh.junkai.nigel.jpg', 'poh.wanlin.jpg', 'poon.junzhe.jpg', 'poon.yipqun.fremont.jpg', 'pua.weikiat.jpg', 'qiu.zerong.jpg', 'qiu.ziyun.jpg', 'qu.yuxuan.jpg', 'quah.yuhuay.alicia.jpg', 'quek.ningxuan.sheares.jpg', 'quek.shengrei.dorothy.jpg', 'saw.peiqi.jpg', 'seah.jiayin.jpg', 'seah.sinnee.jpg', 'see.yanling.joy.jpg', 'seow.jiahao.jpg', 'seow.yuning.charlene.jpg', 'shen.liqin.jpg', 'sheng.hongyi.jpg', 'sheu.chengkai.jpg', 'shi.yichong.bryan.jpg', 'siauw.faith.amanda.jpg', 'sim.jiale.natalie.jpg', 'sim.tingyue.shermus.jpg', 'sng.qiwen.jpg', 'soh.huiwen.eunice.jpg', 'soh.jiahui.celesdia.jpg', 'soh.layhui.bernetta.jpg', 'soh.yeehui.gilana.jpg', 'soo.szejie.jpg', 'su.huangyi.jpg', 'tan.eeheng.jpg', 'tan.hongliang.jpg', 'tan.hongzhao.jpg', 'tan.huihong.rachel.jpg', 'tan.huiqi.deleana.jpg', 'tan.huixiang.jpg', 'tan.jiawei.jpg', 'tan.jingheng.derrel.jpg', 'tan.jinyu.amelia.jpg', 'tan.junhan.xavier.jpg', 'tan.kaiheng.jpg', 'tan.kening.jpg', 'tan.lizi.jpg', 'tan.shuqi.jodie.jpg', 'tan.sijie.jpg', 'tan.wanling.andrea.jpg', 'tan.weekiat.jpg', 'tan.weili.jpg', 'tan.weishuang.jpg', 'tan.xiaochen.jpg', 'tan.xinning.tammy.jpg', 'tan.xinyi.jpg', 'tan.xinyi1.jpg', 'tan.yanning.rachel.jpg', 'tan.yanzhou.jpg', 'tan.yicher.nigel.jpg', 'tan.yongjun.jpg', 'tan.yuanen.jpg', 'tan.yunwee.jpg', 'tan.zhaoyuan.jpg', 'tan.zheng.jpg', 'tan.ziyang.henry.jpg', 'tay.jolin.jpg', 'tay.kaiyi.jpg', 'tay.min.avel.jpg', 'tay.tzejun.jpg', 'tay.yuxin.justina.jpg', 'tay.ziqi.tabitha.jpg', 'teh.wenjan.jpg', 'teh.wenruey.jpg', 'teo.decem.jpg', 'teo.jiamin.rachelle.jpg', 'teo.tianci.jpg', 'teo.tongsiang.gregory.jpg', 'teo.weekiat.joel.jpg', 'teo.zilin.jpg', 'teoh.wenxuan.jpg', 'ting.luoqi.doreen.jpg', 'tseng.huijuan.felicia.jpg', 'tu.fangyu.jpg', 'wang.siyin.jpg', 'wang.yanqi.jpg', 'wang.zixuan.jpg', 'wang.ziyi.jpg', 'wee.hekun.jpg', 'wee.hongming.mervyn.jpg', 'wee.jingying.jpg', 'wee.junen.benjamin.jpg', 'wen.jungao.calvin.jpg', 'won.tiancheng.jonathan.jpg', 'wong.chenyin.natalie.jpg', 'wong.chunying.sheryl.jpg', 'wong.jingkai.bryan.jpg', 'wong.kwonfai.keane.jpg', 'wong.qianhui.karina.jpg', 'wong.shiyin.jpg', 'wong.simin.levyn.jpg', 'wong.szehan.jpg', 'wong.xueli.jpg', 'wong.zongju.joshua.jpg', 'wu.xueni.jpg', 'wuen.shihui.kenneth.jpg', 'xia.xingyu.jpg', 'xie.yaoyue.jpg', 'xing.tingjing.jpg', 'xu.daofu.jpg', 'xu.yinfeng.jpg', 'yam.jinhao.maxim.jpg', 'yang.yueshan.jpg', 'yang.yuzhao.jpg', 'yao.yiyin.jpg', 'yap.jiaxuan.jpg', 'yap.seehao.jpg', 'yap.zichen.jpg', 'yee.jia.shuen.jpg', 'yeo.jierui.shermaine.jpg', 'yeo.xinru.edisa.joycelin.jpg', 'yeo.xuan.jpg', 'yeo.yeekiam.ryan.jpg', 'yeoh.kaili.kelly.jpg', 'yeong.meiqi.lishire.jpg', 'yu.suetyui.michelle.jpg', 'yu.yifei.jason.jpg', 'yu.zongxu.jpg', 'zhang.haolin.jpg', 'zhang.yifan1.jpg', 'zhang.yuerong.lucretia.jpg', 'zhang.yufu.jpg', 'zhong.haozhe.jpg', 'zhou.wanxuan.jpg', 'zhu.dongqing.jpg'];
+		var random_text_array = ['Ang Kuanglong 5C31', 'Ang Sinyu', 'Ang Sookmin Michelle', 'Ang Weijing', 'Ang Weileong 5C31', 'Ang Wenyang 5C13', 'Ang Xiaoyi 5C11', 'Ang Xinling Adelle', 'Ang Xinrong Amanda 5C13', 'Ang Xinyin', 'Baey Zoer 5C12', 'Bian Tong', 'Boh Duangsey', 'Boon Yanman Mabel 5C32', 'Chan Keqing', 'Chan Kwangjie Jeremy', 'Chan Li Rachel 5C13', 'Chan Shinning 5C11', 'Chan Sihon 5C12', 'Chan Tingshuen Jade 5C33', 'Chan Zhaokang Nathaniel', 'Chang Weiching', 'Chee Jenhao Jovan 5C31', 'Chee Zheliang Darren 5C31', 'Chen Haoyeung 5C21', 'Chen Jing1 5C11', 'Chen Shudan', 'Chen Shun 5C32', 'Chen Wenjing Chantelle', 'Chen Xiaozhou', 'Chen Xinyi', 'Cheong Grace 5C12', 'Cheong Jiayun Brenda', 'Cheong Weijuan', 'Cher Jialin Celine', 'Chew Guohui Bryan 5C21', 'Chew Junhao Keith 5C32', 'Chew Shien Shawn 5C32', 'Chew Yuting Jazlyn', 'Chew Ziying 5C13', 'Chia Cheeyong Bryan', 'Chia Kaixin', 'Chin Ngiokyong', 'Chin Suekay', 'Chin Yongchen', 'Chiu Yiwen', 'Chong Qihui Anthony 5C33', 'Chong Zhekai Zachary', 'Chong Zhiyang 5C12', 'Chou Pohan', 'Chow Angel 5C22', 'Chua Jiarong', 'Chua Kaiyi Kelly', 'Chua Liangwei Collin', 'Chua Shaelinn 5C31', 'Chua Weili 5C21', 'Chua Xinni Nicole', 'Chua Yi 5C32', 'Chua Yilin', 'Chua Yuxin 5C22', 'Chui Waikin Linus', 'Clarissa Felice Nurawan 5C31', 'Dee Murui Marcus 5C12', 'Dou Minyue', 'Ee Ansheng 5C33', 'Foo Ningxin 5C13', 'Foo Sheelynn', 'Foong Haohan Isaac', 'Foong Ruhui 5C22', 'Foong Xinyi Reena 5C11', 'Fu Jiaxin', 'Gan Ruiyi', 'Goh Joshaun 5C13', 'Goh Junxian Gaston 5C33', 'Goh Kaisiong Daniel', 'Goh Kuanwei Eldrick', 'Goh Qingkhang', 'Goh Siauwee 5C33', 'Gu Zehao', 'Guan Ziwen', 'Guo Chenrui', 'Guo Yisheng', 'Guo Yuxin', 'Han Xingyi', 'He Baifeng 5C21', 'Heng Weiting Charlene', 'Hing Weiyen Clarisse', 'Ho Cheukkiu Anthony', 'Ho Chikiat Eric', 'Ho Jingzhi Xanthus 5C32', 'Ho Lixuan Rachel', 'Hong Xinyue', 'Hou Linxin 5C32', 'Hsu Yining', 'Huang Shiyun', 'Huang Xu 5C13', 'Huang Yuqian', 'Jin Zilong 5C33', 'Kang Yixi', 'Kang Yunhui Chloe', 'Kee Seowhan 5C32', 'Koh Chengyee Reena', 'Koh Chinqi Reinald 5C12', 'Koh Jiayi Jolene', 'Koh Jieqing Shanice', 'Koh Jinkai Jonathan', 'Koh Meiyi Rachel', 'Koh Mingen', 'Koh Mingyi', 'Koh Ruijie 5C31', 'Koh Ruiling', 'Koh Yiksim Jess 5C11', 'Koh Zhewei1 5C22', 'Koh Zixian', 'Koo Zhengtao', 'Kua Wingyew Elena', 'Kuoh Junjie 5C33', 'Kwa Zhicheng 5C22', 'Lai Wanjun', 'Lai Yihui Cleon', 'Lam Yunxiu1', 'Lau Feihan Clare', 'Law Seanmeng 5C31', 'Law Songen Timothy', 'Lean Jieying', 'Lee Dan Joan', 'Lee Haoming 5C22', 'Lee Huimin Hannah Dominy 5C12', 'Lee Huiyi Samantha 5C32', 'Lee Jiahui Jane 5C12', 'Lee Jiaxuan Valora', 'Lee Jiemin1', 'Lee Jieyi Amidala 5C21', 'Lee Jieying Michelle 5C13', 'Lee Jinkang 5C31', 'Lee Qi', 'Lee Shinsiang Jeryl', 'Lee Sinyuen', 'Lee Tong Rachel 5C32', 'Lee Wenting Cheryl 5C11', 'Lee Xianlu 5C22', 'Lee Yeeling 5C13', 'Lee Yentheng', 'Lee Yishan 5C13', 'Lee Yuerong', 'Lee Yuquan 5C33', 'Lek Zening 5C31', 'Leng Yunhui Gladys', 'Leow Yonghan Jerome', 'Li Jiayang', 'Li Lingchen', 'Li Mingyuan', 'Li Yingying', 'Li Zhaoqi', 'Liang Kaili Meg', 'Liang Qiliu', 'Liaw Yingru Karis 5C21', 'Liew Xinwei', 'Liew Yunhe Trina 5C31', 'Liew Yunzhen Karynn', 'Lim Choonhong Dexter 5C22', 'Lim Enqi Natalie', 'Lim Jiaying Grace', 'Lim Kainsim Audrey 5C12', 'Lim Kaixin Sheena', 'Lim Min Renee', 'Lim Siting Sarah', 'Lim Xinyan1', 'Lim Yiqi Kolette', 'Lim Yitorng 5C21', 'Lim Yongshi Chloe', 'Lim Yunxuan Patria', 'Lim Zerui Jeffrey 5C33', 'Lim Zhijia', 'Lim Zian Ryan 5C21', 'Lim Zihwee Corliss 5C31', 'Lin Chieh', 'Lin Minchen 5C13', 'Lin Ming', 'Lin Zhiqi 5C33', 'Liu Enmu', 'Liu Yantong Ashley', 'Liu Zixin', 'Loh Bojie Sean', 'Loh Danhong', 'Loh Jianyang', 'Loh Jiawen 5C12', 'Loh Ruixuan Carine', 'Loh Wenyu 5C32', 'Loh Woonqing Pearlyn 5C33', 'Loke Zhihao Ivan 5C33', 'Low Hoykay Nadya 5C12', 'Low Jiayun Cheryl', 'Low Jinghwee Grace', 'Low Jingwen Megan', 'Low Junpeng Lincoln', 'Low Yuanjia Dannica', 'Lu Jiaxin Jacky', 'Lu Zechen 5C22', 'Lye Jueyin Amanda 5C22', 'Ma Yuge', 'Ma Yuxin', 'Man Waiting 5C31', 'Mok Jingwen 5C33', 'Mok Shuwen Marion', 'Mun Yitjit Ashley 5C21', 'Neo Jieyun Jamie 5C32', 'Ng Chekkhau 5C32', 'Ng Cuiting Christine', 'Ng Eefong', 'Ng Jiahui Cheryl', 'Ng Jiaying Cliona 5C22', 'Ng Jingqing', 'Ng Jingyi Stephanie', 'Ng Lien Chloe 5C22', 'Ng Minyee Rachel 5C21', 'Ng Sehng Wayne 5C32', 'Ng Sekit Ethan 5C31', 'Ng Sinyi Talia', 'Ng Tzeann Jonathan 5C32', 'Ng Weiyang Shaun', 'Ng Xingyu', 'Ng Zixin', 'Ng Ziyan Priscila', 'Ngiam Minsi Eunice 5C22', 'Ngiow Haobin', 'Ngo Yingxuan', 'Ngoh Pekngee Yukie 5C22', 'Oh Xinyi', 'Ong Claudia Beth 5C21', 'Ong Hongkai', 'Ong Hongli 5C32', 'Ong Huiru Lauren 5C12', 'Ong Junhong Bryan 5C21', 'Ong Kailoong Aaron 5C32', 'Ong Liying Valerie 5C11', 'Ong Qingqing 5C11', 'Ong Siying Sheryl 5C13', 'Ong Wanqing Renee', 'Ong Ziyuan 5C22', 'Oon Shaoren', 'Peh Minghan', 'Pei Zheyi Randall', 'Peng Weiyao 5C22', 'Phang Jieqi Jackie', 'Phang Lixuan Celest', 'Phang Xinnminn Marissa', 'Phua Kahhwee Michelle 5C13', 'Phua Xuemin Julia', 'Phua Yuwen', 'Poh Baoli', 'Poh Huiyun Fiona 5C32', 'Poh Jieru Shermin 5C22', 'Poh Jingting Cheryl', 'Poh Junkai Nigel 5C31', 'Poh Wanlin', 'Poon Junzhe', 'Poon Yipqun Fremont', 'Pua Weikiat', 'Qiu Zerong 5C33', 'Qiu Ziyun', 'Qu Yuxuan', 'Quah Yuhuay Alicia', 'Quek Ningxuan Sheares', 'Quek Shengrei Dorothy', 'Saw Peiqi 5C22', 'Seah Jiayin 5C21', 'Seah Sinnee Celine  5C21', 'See Yanling Joy 5C13', 'Seow Jiahao', 'Seow Yuning Charlene', 'Shen Liqin 5C31', 'Sheng Hongyi 5C13', 'Sheu Chengkai', 'Shi Yichong Bryan', 'Siauw Faith Amanda 5C12', 'Sim Jiale Natalie 5C32', 'Sim Tingyue Shermus 5C21', 'Sng Qiwen', 'Soh Huiwen Eunice', 'Soh Jiahui Celesdia 5C22', 'Soh Layhui Bernetta 5C33', 'Soh Yeehui Gilana 5C11', 'Soo Szejie 5C11', 'Su Huangyi 5C13', 'Tan Eeheng 5C33', 'Tan Hongliang 5C33', 'Tan Hongzhao 5C33', 'Tan Huihong Rachel', 'Tan Huiqi Deleana 5C13', 'Tan Huixiang', 'Tan Jiawei', 'Tan Jingheng Derrel 5C11se', 'Tan Jinyu Amelia 5C31', 'Tan Junhan Xavier', 'Tan Kaiheng', 'Tan Kening 5C33', 'Tan Lizi 5C22', 'Tan Shuqi Jodie 5C13', 'Tan Sijie 5C22', 'Tan Wanling Andrea', 'Tan Weekiat', 'Tan Weili', 'Tan Weishuang', 'Tan Xiaochen 5C33', 'Tan Xinning Tammy', 'Tan Xinyi', 'Tan Xinyi1', 'Tan Yanning Rachel', 'Tan Yanzhou', 'Tan Yicher Nigel', 'Tan Yongjun', 'Tan Yuanen 5C13', 'Tan Yunwee 5C32', 'Tan Zhaoyuan', 'Tan Zheng 5C31', 'Tan Ziyang Henry', 'Tay Jolin', 'Tay Kaiyi 5C21', 'Tay Min Avel', 'Tay Tzejun 5C31', 'Tay Yuxin Justina', 'Tay Ziqi Tabitha 5C32', 'Teh Wenjan 5C33', 'Teh Wenruey', 'Teo Decem', 'Teo Jiamin Rachelle 5C12', 'Teo Tianci 5C22', 'Teo Tongsiang Gregory', 'Teo Weekiat Joel', 'Teo Zilin', 'Teoh Wenxuan', 'Ting Luoqi Doreen', 'Tseng Huijuan Felicia', 'Tu Fangyu', 'Wang Siyin', 'Wang Yanqi', 'Wang Zixuan 5C21', 'Wang Ziyi', 'Wee Hekun', 'Wee Hongming Mervyn', 'Wee Jingying 5C32', 'Wee Junen Benjamin 5C31', 'Wen Jungao Calvin', 'Won Tiancheng Jonathan', 'Wong Chenyin Natalie', 'Wong Chunying Sheryl', 'Wong Jingkai Bryan', 'Wong Kwonfai Keane 5C32', 'Wong Qianhui Karina 5C12', 'Wong Shiyin', 'Wong Simin Levyn', 'Wong Szehan 5C31', 'Wong Xueli', 'Wong Zongju Joshua', 'Wu Xueni', 'Wuen Shihui Kenneth 5C32', 'Xia Xingyu', 'Xie Yaoyue', 'Xing Tingjing', 'Xu Daofu', 'Xu Yinfeng', 'Yam Jinhao Maxim', 'Yang Yueshan', 'Yang Yuzhao', 'Yao Yiyin', 'Yap Jiaxuan 5C22', 'Yap Seehao 5C11', 'Yap Zichen', 'Yee Jia Shuen 5C31', 'Yeo Jierui Shermaine 5C12', 'Yeo Xinru Edisa Joycelin 5C12', 'Yeo Xuan 5C11', 'Yeo Yeekiam Ryan 5C32', 'Yeoh Kaili Kelly', 'Yeong Meiqi Lishire', 'Yu Suetyui Michelle', 'Yu Yifei Jason', 'Yu Zongxu 5C31', 'Zhang Haolin 5C11', 'Zhang Yifan1', 'Zhang Yuerong Lucretia', 'Zhang Yufu', 'Zhong Haozhe', 'Zhou Wanxuan 5C33', 'Zhu Dongqing'];function getRandomImage(imgAr, path) {
+			path = path || 'images/2017y5photos/'; // default path here
+			var num = Math.floor( Math.random() * imgAr.length );
+			var img = imgAr[ num ];
+			var boi = random_text_array[ num ];
+			var imgStr = '<img src="' + path + img + '" alt = ""><p>' + boi +'</p>';
+			document.write(imgStr); document.close();
+		}
+		</script>
+    </head>
+
+	<body>
+	
+		<div id="page">
+			
+			<header>
+				<!-- <a class="logo" title="Hit-or-Miss" href="index.html"><span>RNGesus</span></a> -->
+				<!--<svg>
+					<g>
+						<rect x="0" y="0" width="140" height="40" fill="none"></rect>
+						<text x="3" y="35" font-family="Fjalla One" font-size="35" fill="White">RNGesus</text>
+					</g>
+				</svg> -->
+				
+				<h1 class="logo"><a href="index.html">Hit-or-Miss</a></h1>
+
+				<div class="mobile-nav">
+					<div class="menu-btn" id="menu-btn">
+						<div></div>
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+				
+					<div class="responsive-menu">
+						<ul class="nav-list">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="randomnumbergenerator.html">Random Number Generator</a></li>
+							<li><a href="randomnamegenerator.html">Random Name Generator</a></li>
+							<li><a href="about.html">About</a></li>
+							<li><!-- Flat button with ripple -->
+
+							<li><button id="buttone" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+							  Button
+							</button></li>
+						</ul>
+					</div> 
+					
+				</div>
+			</header>
+			
+			<div id="page_wrap" style="text-align:center">
+				<script type="text/javascript">getRandomImage(random_images_array, 'images/2017y5photos/');</script>
+				<span>GPA = </span><span class="randomNode" master="question2"></span>
+				<br>
+				<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored randomNum" id="question2" min="0.01" max="4.0"><a href="randomnamegenerator2.html">Refresh</a></button>
+
+				<br>
+				<button onclick="window.location='randomnamegenerator.html'; return false;">Back</button>
+			
+			</div>
+			
+
+			
+			<blockquote>
+			  <p>Keep Calm and pray to RNGesus</p>
+			  <footer><strong>RNGesus </strong><cite title="Source Title">Our Lord and Saviour</cite></footer>
+			</blockquote>
+			
+			<footer class="page-footer grey darken-4">
+				<div class="footer-copyright">
+					<div class="container">
+						<a class="white-text left" href="#!">© Copyright 2017</a>
+						<a class="white-text right" href="https://github.com/Agentzhao">More</a>
+					</div>
+				</div>
+			</footer>
+		</div>
+
+		<!-- firebase -->
+		<script src="https://www.gstatic.com/firebasejs/3.7.0/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/3.7.0/firebase-auth.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/3.7.0/firebase-database.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/3.7.0/firebase-messaging.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/3.7.0/firebase.js"></script>
+		<script>
+		  // Initialize Firebase
+		  var config = {
+			apiKey: "AIzaSyDV45JX9JhN9KAxdL2RT16mpCmY2X7oaVg",
+			authDomain: "hit-or-miss-97ae1.firebaseapp.com",
+			databaseURL: "https://hit-or-miss-97ae1.firebaseio.com",
+			storageBucket: "hit-or-miss-97ae1.appspot.com",
+			messagingSenderId: "1041025602333"
+		  };
+		  firebase.initializeApp(config);
+		</script>		
+
+		<!--html scripts-->
+		<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"</script>
+		<script type="text/javascript" src="js/materialize.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/jquery-3.1.1.min.js"><\/script>')</script>
+        <script src="js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+        <script>
+            window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+            ga('create','UA-91554953-1','auto');ga('send','pageview')
+        </script>
+        <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+		
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-93227737-1', 'auto');
+		  ga('send', 'pageview');
+
+		</script>
+
+		<!-- menu -->
+		<script type="text/javascript">
+			jQuery(function($){
+				$( '.menu-btn' ).click(function(){
+				$('.responsive-menu').toggleClass('expand')
+				});
+			});
+		</script>
+		
+		<script>
+			jQuery(document).ready(function($){
+				$(".menu-item-has-children").append("<div class='open-menu-link open'>+</div>");
+				$('.menu-item-has-children').append("<div class='open-menu-link close'>-</div>");
+	
+				$('.open').addClass('visible');
+	
+				$('.open-menu-link').click(function(e){
+					var childMenu =  e.currentTarget.parentNode.children[1];
+					if($(childMenu).hasClass('visible')){
+						$(childMenu).removeClass("visible");
+	
+						$(e.currentTarget.parentNode.children[3]).removeClass("visible");
+						$(e.currentTarget.parentNode.children[2]).addClass("visible");
+					} else {
+						$(childMenu).addClass("visible");
+	
+					$(e.currentTarget.parentNode.children[2]).removeClass("visible");
+						$(e.currentTarget.parentNode.children[3]).addClass("visible");
+					}
+				});
+			});
+		</script>
+		
+
+
+
+	</body>
+</html>
