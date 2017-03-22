@@ -1,4 +1,8 @@
+
+
+
 // Random Number Generator
+// Invokable makeRandom function requires element to have a min & max
 var makeRandom = function() {
   var min = this.getAttribute("min");
   var max = this.getAttribute("max");
@@ -46,26 +50,84 @@ for (var i = 0; i < randomNum.length; i++) {
   randomNum[i].addEventListener('click', makeRandom, false);
 }
 
-// random student generator
 
 
 
-//navbar
-// Initialize collapse button
-$(".button-collapse").sideNav();
-// Initialize collapsible (uncomment the line below if you use the dropdown variation)
-//$('.collapsible').collapsible();
-$('.button-collapse').sideNav({
-	menuWidth: 300, // Default is 300
-    edge: 'right', // Choose the horizontal origin
-    closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
-    draggable: true // Choose whether you can drag to open on touch screens
-    }
-);
 
-// Show sideNav
-$('.button-collapse').sideNav('show');
-// Hide sideNav
-$('.button-collapse').sideNav('hide');
-// Destroy sideNav
-$('.button-collapse').sideNav('destroy');
+
+
+
+// Authentication
+// TODO: Enable Google sign in project console -> select, enable, save
+var provider = new firebase.auth.GoogleAuthProvider();
+
+// Set up user variables (to be assigned later)
+var 
+  user = firebase.auth().currentUser, name, uid, email, photoUrl;
+
+function update(){
+  user = firebase.auth().currentUser;
+  if (user != null) {
+  user.providerData.forEach(function (profile) {
+    console.log("Sign-in provider: "+profile.providerId);
+    console.log("  Provider-specific UID: "+profile.uid);
+    console.log("  Name: "+profile.displayName);
+    console.log("  Email: "+profile.email);
+    console.log("  Photo URL: "+profile.photoURL);
+  });
+}
+}
+// authentication flow: redirect
+function signIn(){
+  firebase.auth().signInWithRedirect(provider);
+  // Always update user
+  update();
+}
+
+firebase.auth().onAuthStateChanged(function(user) {
+	update();
+	if(user) {
+		$("#buttone").text("Sign Out");
+		$("#buttone").click(function(){
+			firebase.auth().signOut().then(function() {
+			// Sign-out successful.
+			console.log("Signed out");
+			hi = 0;
+		}, function(error) {
+			// An error happened.
+			console.log("Sign out unsuccessful");
+			});
+		});
+	} else if(hi < 1){
+		$("#buttone").text("No user signed in");
+		signIn();
+	}
+  });
+
+var hi = 0;
+$(document).ready(function () {
+  update();
+  $("#buttone").click(function(){
+	signIn();  
+  });
+
+  hi += 1;
+  // Site handling
+  if(user) {
+		$("#buttone").text("Sign Out");
+		$("#buttone").click(function(){
+			firebase.auth().signOut().then(function() {
+			// Sign-out successful.
+			console.log("Signed out");
+			hi = 0;
+		}, function(error) {
+			// An error happened.
+			console.log("Sign out unsuccessful");
+			});
+		});
+	} else if(hi < 1){
+		$("#buttone").text("No user signed in");
+		signIn();
+	}
+  
+});
