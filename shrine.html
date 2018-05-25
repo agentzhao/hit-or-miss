@@ -77,18 +77,36 @@
 				</div>
 			</header>
 			
-			<div id="page_wrap" style="text-align:center">
-				<script type="text/javascript">getRandomImage(random_images_array, 'images/2017y5photos/');</script>
-				<span>GPA = </span><span class="randomNode" master="question2"></span>
-				<br>
-				<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored randomNum" id="question2" min="0.01" max="4.0"><a href="randomnamegenerator2.html">Refresh</a></button>
-
-				<br>
-				<button onclick="window.location='randomnamegenerator.html'; return false;">Back</button>
+			<div id="page_wrap" style="text-align:center"> 
 			
+				<style>
+					.shrine {
+						max-width: 100%;
+						height: auto;
+					} 
+				</style>
+				
+				<img class = "shrine" src="images/churchofrngesus.jpg" alt="Church Of RNGesus">
+				<br><br>
+				<script type="text/javascript">
+					var clicks = 0;
+					var prayer = 0; 
+					function onClick() {
+						clicks += 1;
+						if ((Math.floor(Math.random() * 10)) >= 7)
+							prayer += 1
+						document.getElementById("clicks").innerHTML = clicks;
+						document.getElementById("prayer").innerHTML = prayer;
+					};
+				</script>
+				
+				<button id="buttone" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" onClick="onClick()">
+					Pray
+				</button>
+
+					<p>You have prayed to RNGesus <a id="clicks">0</a> times</p>
+					<p>RNGesus has answered your prayers <a id="prayer">0</a> times</p>
 			</div>
-			
-
 			
 			<blockquote>
 			  <p>Keep Calm and pray to RNGesus</p>
@@ -121,8 +139,8 @@
 			messagingSenderId: "1041025602333"
 		  };
 		  firebase.initializeApp(config);
-		</script>		
-
+		</script>
+		
 		<!--html scripts-->
 		<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
 		<script type="text/javascript" src="js/bootstrap.min.js"</script>
@@ -136,7 +154,7 @@
             ga('create','UA-91554953-1','auto');ga('send','pageview')
         </script>
         <script src="https://www.google-analytics.com/analytics.js" async defer></script>
-		
+
 		<script>
 		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -147,7 +165,7 @@
 		  ga('send', 'pageview');
 
 		</script>
-
+		
 		<!-- menu -->
 		<script type="text/javascript">
 			jQuery(function($){
@@ -181,8 +199,5 @@
 			});
 		</script>
 		
-
-
-
 	</body>
 </html>

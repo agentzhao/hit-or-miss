@@ -20,7 +20,7 @@
 		<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,700,700i" rel="stylesheet">
 		
 		<!-- Latest compiled and minified CSS -->
-		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<!-- Optional Bootstrap theme -->
 		<link rel="stylesheet" href="css/bootstrap-theme.min.css">
 
@@ -28,6 +28,7 @@
 		<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
 		<!-- My own CSS -->
 		<link rel="stylesheet" href="css/main.css" type="text/css">
+		<link rel="stylesheet" href="css/luckydraw.css" type="text/css">
     </head>
 	<body>
 	
@@ -63,39 +64,86 @@
 					
 				</div>
 			</header>
-			
 
-			<div>
-				<h1 class="center-align">Hit-or-Miss v2.0</h1>
-				<h5 class="center-align">Author: Tan Hong Zhao</h5>
-				<h5 class="center-align">Email: tan.hongzhao@dhs.sg</h5>
-				<h5 class="center-align">Github: <a href="https://github.com/Agentzhao">Agentzhao</a></h5>
-				<h5 class="center-align">Find the source code <a href="https://github.com/Agentzhao/hit-or-miss">here</a></h5>
+			<div id="header" id="page_wrap" style="text-align:center" class="container-fluid">
+				<h1 class="light-text" style="font-size:10vw;">Lucky Draw</h1>
 			</div>
-			<br>
-			<div>
-				<h3 class="center-align">Patch Notes 2.0</h3>
-				<h5 class="center-align">6/5/2018</h5>
-				<h5 class="center-align">Added lucky draw feature</h5>
-				<h5 class="center-align">Added Shrine to pray to the one true god</h5>
-				<h5 class="center-align">Added lucky draw for BuildingBloCS 2018</h5>
-				<h5 class="center-align">Updated patch notes</h5>
-				<h5 class="center-align">Fixed a photo</h5>
-				<h5 class="center-align">Made responsive design abit better</h5>
-				<h5 class="center-align">New bug introduced</h5>
+					
+			<div id="header2" id="page_wrap" style="text-align:center" class="main">		
+				<div>
+					<form>
+					
+						<h5 class="light-text" style="font-size:3vw;">Upload CSV below</h5>
+						
+						<label style="color: #f4f4f4" id = 'add' class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect" for="my-file-selector">
+							<input id="my-file-selector" type="file" style="display:none;" onchange="$('#upload-file-info').html($(this).val()); handleFiles(this.files);">
+							<i class="material-icons">add</i>
+						</label>
+						
+						<br> <br>
+						
+						<button style="color: #f4f4f4" type="button" id="buttone" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" class="help" onClick="openModal('helpModal')" href="#">
+							Send Help
+						</button>
+						
+					</form>
+				</div>	
+			</div>
+
+			<div id="helpModal" class="modal">
+				<div class="modal-content">
+					<span class="close" onclick="closeModal('helpModal')">&times;</span>
+					
+					<h3>Help</h3>
+					<br>
+					<p>To harness the power of RNGesus, upload a <a href="https://www.howtogeek.com/348960/what-is-a-csv-file-and-how-do-i-open-it/">CSV</a> file that contains a column with
+					names of the winner(s) to be chosen from.</p>
+					
+					<p>When a winner is selected, they cannot be chosen again.</p>
+					
+					<p>Previously selected winners will be displayed at the bottom of the page.</p>
+					
+					<p>Especially modified for BuildingBloCS 2018 - The earlier you sign up, the more chances you will have! </p>
+				</div>
+			</div>
+
+			<div id="errorModal" class="modal">
+				<div class="modal-content">
 				
-			</div>
-			<br>
-			<div>
-				<h3 class="center-align">Patch Notes 1.0</h3>
-				<h5 class="center-align">22/3/2017</h5>
-				<h5 class="center-align">Website was created to save the world </h5>
-				<h5 class="center-align">Added random number generator</h5>
-				<h5 class="center-align">Added random name generator for dhs 2017 y5 cohort</h5>
-				<h5 class="center-align">Added firebase sign in function which doesn't do anything</h5>
-				<h5 class="center-align">Added this page</h5>
+					<span class="close" onclick="closeModal('errorModal')">&times;</span>
+				
+					<h3>ERROR</h3>
+				
+					<p>Missing file with possible winner names. Please upload a file and try again.</p>
+				</div>
 			</div>
 
+			<div id="emptyList" class="modal">
+				<div class="modal-content">
+					<span class="close" onclick="closeModal('emptyList')">&times;</span>
+					<h3>ERROR</h3>
+					<p>Everyone has already won. Upload a new file to randomize more winners.</p>
+				</div>
+			</div>
+
+			<div id="banner-area" class="container-fluid">
+				<div class="jumbotron">
+					<h1 style= "font-size:6vw;" id="winners-name">Winner's name displayed here</h1>
+					<br>
+					<p>
+						<a onClick="RNGesus()" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" href="#" role="button">
+						Next Winner</a>
+					</p>
+				</div>
+			</div>
+			
+			<div>
+				<div class="row, light-text">
+					<div id="all-winners" class="light-text" style="font-size:6vw;">
+					</div>
+				</div>
+			</div>
+			
 			<blockquote>
 			  <p>Keep Calm and pray to RNGesus</p>
 			  <footer><strong>RNGesus </strong><cite title="Source Title">Our Lord and Saviour</cite></footer>
@@ -111,6 +159,8 @@
 			</footer>
 			
 		</div>
+		<!--luckydraw script-->
+		<script src="js/luckydraw.js"></script>
 		
 		<!-- firebase -->
 		<script src="https://www.gstatic.com/firebasejs/3.7.0/firebase-app.js"></script>

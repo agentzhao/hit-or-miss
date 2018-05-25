@@ -50,7 +50,10 @@ for (var i = 0; i < randomNum.length; i++) {
   randomNum[i].addEventListener('click', makeRandom, false);
 }
 
-
+//coin
+function coinFlip() {
+    return (Math.floor(Math.random() * 2) == 0) ? 'heads' : 'tails';
+}
 
 
 
